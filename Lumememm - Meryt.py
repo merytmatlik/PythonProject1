@@ -7,6 +7,7 @@ pygame.draw.circle(screen, [255, 255, 255], [150,138], 40,0)
 pygame.draw.circle(screen, [255, 255, 255], [150,226], 50,0)
 pygame.draw.circle(screen, [0, 0, 0], [140,65], 5,0)
 pygame.draw.circle(screen, [0, 0, 0], [160,65], 5,0)
+pygame.draw.polygon(screen, [255, 0, 0], [(145, 75), (155, 75), (150, 90)], 0)
 pygame.display.update()
 running = True
 while running:
