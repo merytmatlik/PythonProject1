@@ -1,16 +1,30 @@
-import pygame#impordib pygame library
-pygame.init()#algatab Pygame'i mooduli, et kasutada selle funktsioone
-screen=pygame.display.set_mode([640,480])#loob akna suurusega 640x480 pikslit
-pygame.display.set_caption("2")#määrab akna pealkirjaks "2"
-background = pygame.image.load("bg_shop.png")  # Laeb pildi
-screen.blit(background, (0, 0))  # Joonistab taustapildi aknasse
+import pygame  # Impordib pygame'i
+pygame.init()  # Algatab Pygame'i mooduli
+
+screen = pygame.display.set_mode([640, 480])  # Loob akna suurusega 640x480 pikslit
+pygame.display.set_caption("2")  # Määrab akna pealkirja
+
+# Laeb pildid
+background = pygame.image.load("bg_shop.png")
 seller = pygame.image.load("seller.png")
+chat = pygame.image.load("chat.png")
+
+# Muudab piltide suurust
 seller = pygame.transform.scale(seller, [255, 310])
-screen.blit(seller,[105,155])
-pygame.display.update()#muutuja, mis kontrollib mängutsüklit.
+chat = pygame.transform.scale(chat, [150, 150])
+
+# Joonistab pildid õigesti järjestikku
+screen.blit(background, (0, 0))  # Kõigepealt taust
+screen.blit(seller, [105, 155])  # Siis müüja
+screen.blit(chat, [200, 100])  # Siis vestlusmull (erinev asukoht, et mitte katta müüjat)
+
+pygame.display.update()  # Uuendab ekraani
+
+# Pygame'i mängutsükkel
 running = True
 while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-pygame.quit()#read 12-17 seadistavad, et programm töötab kuni kasutaja sulgeb akna
+
+pygame.quit()  # Lõpetab Pygame'i
