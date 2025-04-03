@@ -8,7 +8,7 @@ WIDTH, HEIGHT = 640, 480  # Ekraani suurus
 BALL_SIZE = 20  # Palli suurus
 PADDLE_WIDTH, PADDLE_HEIGHT = 120, 20  # Aluse suurus
 BALL_SPEED = [4, 4]  # Palli algkiirus
-PADDLE_SPEED = 5  # Aluse kiirus
+PADDLE_SPEED = 4  # Aluse kiirus
 
 # Värvid
 LIGHT_BLUE = (173, 216, 230)#tausta värv
