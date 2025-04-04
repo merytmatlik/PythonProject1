@@ -71,7 +71,7 @@ while running:
     # Punase auto kuvamine
     screen.blit(red_car_img, (red_car_x, red_car_y))
 
-    # Skoori kuvamine
+    # Skoori kuvamine (teisendatakse stringiks)
     score_text = font.render("Skoor: " + str(score), True, BLUE)
     screen.blit(score_text, (10, 10))
 
