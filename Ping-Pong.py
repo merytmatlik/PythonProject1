@@ -28,7 +28,9 @@ paddle_image = pygame.transform.scale(paddle_image, (PADDLE_WIDTH, PADDLE_HEIGHT
 # Palli algseisund
 ball_x = WIDTH // 2 - BALL_SIZE // 2
 ball_y = 0 #alustab ülevalt keskelt
-ball_speed_x, ball_speed_y = BALL_SPEED
+ball_speed_x = random.choice([-4, 4])
+ball_speed_y = 4
+
 
 # Aluse algseisund
 paddle_x = WIDTH // 2 - PADDLE_WIDTH // 2
